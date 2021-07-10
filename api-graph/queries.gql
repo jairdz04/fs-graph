@@ -1,0 +1,28 @@
+mutation {
+  insertEmployee(
+    name: "Andy Murray", 
+    username: "andy03",
+    age: 34, 
+    hire_date: "2004-02-07T15:10:01.471Z"
+  )
+}
+
+{
+  getEmployees(q: "", sort: "DESC", sortField: "name", limit: 0, offset: 0){
+    limit,
+    offset,
+    count,
+    items {
+      id, 
+      name, 
+      age, 
+      hire_date
+    }
+  }
+}
+
+mutation {
+    inactivateEmployee(
+        id: ""
+    ) 
+}
